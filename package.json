@@ -1,0 +1,29 @@
+{
+  "name": "react_course",
+  "version": "1.0.0",
+  "description": "This is the React course",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikithagowlikar/React.git"
+  },
+  "keywords": [],
+  "author": "Nikitha Gowlikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikithagowlikar/React/issues"
+  },
+  "homepage": "https://github.com/nikithagowlikar/React#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "broswerslist": [
+    "last 2 versions"
+  ]
+}
