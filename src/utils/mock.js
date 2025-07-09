@@ -1,27 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          alter="logo"
-          className="logo"
-          src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg"
-        ></img>
-      </div>
-      <div className="nav-bar">
-        <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 const resObj = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
@@ -647,53 +623,4 @@ const resObj = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-const Card = (props) => {
-  console.log("pppppp", props?.data);
-  const { name, cuisines, locality, avgRating, cloudinaryImageId } =
-    props?.data.info;
-  return (
-    <div className="card">
-      <div className="food-logo">
-        <img
-          alt="food logo "
-          className="food"
-          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
-        ></img>
-      </div>
-      <h3>{name}</h3> <h4>{locality}</h4> <h4>{cuisines.join(",")}</h4>
-      <h5>{avgRating} star</h5>{" "}
-    </div>
-  );
-};
-const SearchBar = () => {
-  return <div className="search-bar">Search</div>;
-};
-const RestaurantContainer = () => {
-  return (
-    <div className="RestaurantContainer">
-      {resObj.map((item) => {
-        return <Card key={item?.info?.id} data={item} />;
-      })}
-    </div>
-  );
-};
-const Body = () => {
-  return (
-    <>
-      <SearchBar /> <RestaurantContainer />{" "}
-    </>
-  );
-};
-
-const AppContainer = () => {
-  return (
-    <div className="AppContainer">
-      <Header />
-      {/* body
-       */}
-      <Body />
-    </div>
-  );
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppContainer />);
+export default resObj;
