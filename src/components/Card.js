@@ -2,7 +2,7 @@ import { CARD_URL } from "../utils/constants";
 const Card = (props) => {
   const { name, cuisines, locality, avgRating, cloudinaryImageId } =
     props?.data.info;
-  console.log("aaaa", `${CARD_URL}${cloudinaryImageId}`);
+
   return (
     <div className="card">
       <div className="food-logo">

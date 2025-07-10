@@ -1,5 +1,7 @@
 # Namaste react
+
 # parcel
+
 -Dev Build
 -Local Server
 -HMR = Hot module Replacement
@@ -18,3 +20,7 @@
 -Tree Shaking -removed unused code
 -Different dev and prod bundles
 
+# how things works
+
+-load-render-api-render
+-component render - then -useEffect will call

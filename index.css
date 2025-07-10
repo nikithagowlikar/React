@@ -39,9 +39,20 @@
 .search-button {
   padding: 10px;
   cursor: pointer;
+  margin-right: 20px;
 }
 .RestaurantContainer {
   display: flex;
   flex-wrap: wrap;
   /* margin: 10px; */
+}
+.search-input {
+  width: 200px;
+  padding: 10px;
+  margin-right: 20px;
+}
+.filter {
+  display: flex;
+  /* padding: 8px; */
+  margin: 10px;
 }
