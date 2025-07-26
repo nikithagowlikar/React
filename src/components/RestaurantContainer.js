@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import resObj from "../utils/mock";
 import Card from "./Card";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const RestaurantContainer = () => {
   const [filter, setFilter] = useState([]);
   const [search, setSearch] = useState("");
   const [alReadyfilter, setAlReady] = useState([]);
+  const onlineStatus = useOnlineStatus();
   useEffect(() => {
     // fetchData();
     setFilter(resObj);
@@ -13,11 +15,17 @@ const RestaurantContainer = () => {
   }, []);
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const res = await data.json();
-    console.log("ressss", res);
+    console.log(
+      "ressss",
+      res?.data.cards[4]?.card?.card?.gridElements?.infoWithStyle
+    );
   };
+  if (!onlineStatus) {
+    return <>You're offline. Please check your internet connection.</>;
+  }
   if (filter.length === 0) {
     return <h1>loading.........</h1>;
   }
