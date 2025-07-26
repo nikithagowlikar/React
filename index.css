@@ -61,3 +61,18 @@ Link {
   margin: 10px;
   font-size: 24px;
 }
+.user-card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 4px;
+}
+.user-card > button {
+  width: 10%;
+}
+.user-card > div {
+  margin-top: 3px;
+}
