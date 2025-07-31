@@ -10,7 +10,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 // import Travel from "./components/Travel";
 const Travel = lazy(() => import("./components/Travel"));
-
+const Laptop = lazy(() => {
+  return import("./components/Laptop");
+});
 const AppContainer = () => {
   return (
     <div className="AppContainer">
@@ -45,6 +47,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>loading travel component</h1>}>
             <Travel />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/laptop",
+        element: (
+          <Suspense fallback={<h1>loading laptop component</h1>}>
+            <Laptop />
           </Suspense>
         ),
       },

@@ -32,11 +32,11 @@ const RestaurantContainer = () => {
 
   return (
     <>
-      <div className="filter">
-        <div className="search-bar">
+      <div className="flex m-4 gap-4">
+        <div className="flex">
           <input
             type="text"
-            className="search-input"
+            className="mr-8 border-2 border-gray-400 rounded-md w-[100%]"
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -44,7 +44,7 @@ const RestaurantContainer = () => {
             }}
           ></input>
           <button
-            className="search-button"
+            className="bg-blue-300 m-3 p-2 rounded-md"
             onClick={() => {
               const filterData = filter.filter((i) => {
                 return i?.info?.name
@@ -57,9 +57,9 @@ const RestaurantContainer = () => {
             Search
           </button>
         </div>
-        <div className="search-bar">
+        <div className="flex items-center">
           <button
-            className="search-button"
+            className=" bg-green-300 rounded-md p-1"
             onClick={() => {
               const filterData = resObj.filter((i) => {
                 return i?.info?.avgRating >= 4.3;
@@ -71,7 +71,7 @@ const RestaurantContainer = () => {
           </button>
         </div>
       </div>
-      <div className="RestaurantContainer">
+      <div className="flex flex-wrap gap-3 m-4">
         {alReadyfilter.map((item) => {
           return (
             <Link to={"/restaurant/" + item?.info?.id} key={item?.info?.id}>

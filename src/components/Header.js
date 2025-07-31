@@ -6,12 +6,12 @@ const Header = () => {
   const [logData, setLogData] = useState("Login");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img alter="logo" className="logo" src={LOGO_URL}></img>
+    <div className="flex justify-between bg-amber-50">
+      <div className="w-36">
+        <img alter="logo" src={LOGO_URL}></img>
       </div>
-      <div className="nav-bar">
-        <ul>
+      <div className="flex items-center m-4 p-4 ">
+        <ul className=" flex gap-4">
           <li>Online Status-{onlineStatus ? "🟢" : "🔴"}</li>
           <li>
             {" "}
@@ -30,15 +30,22 @@ const Header = () => {
             {" "}
             <Link to="/contact">Contact </Link>
           </li>
-
+          <li>
+            {" "}
+            <Link to="/laptop">Laptop </Link>
+          </li>
           <li>cart</li>
-          <button
-            onClick={() => {
-              logData === "Login" ? setLogData("Logout") : setLogData("Login");
-            }}
-          >
-            {logData}
-          </button>
+          <li>
+            <button
+              onClick={() => {
+                logData === "Login"
+                  ? setLogData("Logout")
+                  : setLogData("Login");
+              }}
+            >
+              {logData}
+            </button>
+          </li>
         </ul>
       </div>
     </div>
