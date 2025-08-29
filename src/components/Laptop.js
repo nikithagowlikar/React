@@ -3,7 +3,7 @@ import { useState } from "react";
 const Laptop = () => {
   const [data, setData] = useState(0);
   const slowFactorial = (num) => {
-    console.log("Calculating factorial...");
+    
     let result = 1;
     for (let i = 1; i <= num; i++) {
       // Simulate heavy task

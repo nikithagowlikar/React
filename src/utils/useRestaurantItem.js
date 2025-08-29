@@ -11,7 +11,7 @@ const useRestaurantItem = (resId) => {
       MENU_ITEM + resId + "&catalog_qa=undefined&submitAction=ENTER"
     );
     const resIn = await res.json();
-    console.log("resIn.data!!11", resIn);
+
     setResInfo(resIn.data);
   };
   return resInfo;
