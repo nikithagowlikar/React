@@ -24,3 +24,13 @@
 
 -load-render-api-render
 -component render - then -useEffect will call
+
+# Redux toolkit 
+-Install @reduxjs/toolkit and react-redux
+-Buils our store
+-connect out store to our app
+-slice (cartSlice)
+-dispatch (action)
+-selector
+-click a add button->dispatch an action->reducer(fn)-> store(slider)
+-cart will be updated by subscribing the store(selector)

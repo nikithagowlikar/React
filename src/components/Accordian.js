@@ -1,13 +1,12 @@
 import AccordianList from "./AccordianList";
 
 const Accordian = ({ data, show, setShowAccordian }) => {
- 
-  
   const handleOpen = () => {
     // setShow(!show);
     setShowAccordian();
   };
-
+  const { title, itemCards } = data?.card?.card;
+  console.log("data@@@@@@", data);
   return (
     <>
       {" "}

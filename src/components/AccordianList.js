@@ -1,7 +1,12 @@
-const AccordianList = ({ listData }) => {
- 
-  const { price, name, imageId } = listData?.card?.info;
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
+const AccordianList = ({ listData }) => {
+  const { price, name, imageId } = listData?.card?.info;
+  const dispatch=useDispatch()
+const handleClick=(item)=>{
+dispatch(addItem(item))
+}
   return (
     <>
       <div className="border-b-4 border-gray-200  bg-white px-8 py-4 flex">
@@ -16,10 +21,13 @@ const AccordianList = ({ listData }) => {
             Gluten (Wheat), Soya and Milk & Milk Products.
           </p>
         </div>
-        <div className="w-4/12">
+        <div className="w-4/12 relative">
           <img
             src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imageId}`}
           ></img>
+          <div className="absolute top-0 text-white w-[70px] text-center cursor-pointer font-bold bg-black" onClick={()=>{handleClick(listData)}}>
+            Add +
+          </div>
         </div>
       </div>
     </>

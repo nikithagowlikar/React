@@ -1,3 +1,10 @@
 /node_modules
 /dist
 .parcel-cache
+
+
+#Reduxtookit
+-Install redux-toolkit
+-create store (which contain 'n' no of slice)
+-wrap the Provider to the app(main app) and pass the store
+-create the slice
