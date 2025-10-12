@@ -41,6 +41,7 @@ const RestaurantContainer = () => {
       <div className="flex m-4 gap-4">
         <div className="flex">
           <input
+          data-testid="seachField"
             type="text"
             className="mr-8 border-2 border-gray-400 rounded-md w-[100%]"
             value={search}
@@ -49,6 +50,7 @@ const RestaurantContainer = () => {
             }}
           ></input>
           <button
+           data-testid="seachbtn"
             className="bg-blue-300 m-3 p-2 rounded-md"
             onClick={() => {
               const filterData = filter.filter((i) => {

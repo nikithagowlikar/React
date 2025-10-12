@@ -32,7 +32,6 @@ const AppContainer = () => {
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="AppContainer">
           <Header />
-
           <Outlet />
         </div>
       </UserContext.Provider>

@@ -34,3 +34,14 @@
 -selector
 -click a add button->dispatch an action->reducer(fn)-> store(slider)
 -cart will be updated by subscribing the store(selector)
+
+# setting up testing in our App
+-install react testing library
+-installed jest
+-install babel dependencies
+-configure babel
+-configure parcel .config file to disable default babel transpilation
+-Jest configuration(npx jest --init)
+-install js dom library
+-Install @babel/preset-react -to make js work in test cased
+-Include @babel/presetc-react inside my babel config

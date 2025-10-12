@@ -6,7 +6,7 @@ const Card = (props) => {
     props?.data.info;
   const { loggedInUser } = useContext(UserContext);
   return (
-    <div className="w-72 border-2 border-gray-600 rounded-md p-3 bg-blue-100">
+    <div  data-testid="cardItem" className="w-72 border-2 border-gray-600 rounded-md p-3 bg-blue-100">
       <div className="">
         <img
           alt="food"
